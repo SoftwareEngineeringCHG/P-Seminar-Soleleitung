@@ -5,22 +5,20 @@ using UnityEngine;
 public class CamaraMovementPlayer : MonoBehaviour {
 
 	public float speedMove;
-	public float speedRot;
+  public float speedRot;
 	private Vector3 rot;
 	public Rigidbody rb;
-
 	
 	// Update is called once per frame
 	void Update () {
 
 		Vector3 pos = transform.position;
 
-
 		if (Input.GetKey ("left")) {
-			pos.x += -speedMove * Time.deltaTime;
+			pos += -transform.right * Time.deltaTime * speedMove;
 		}
 		if (Input.GetKey ("right")) {
-			pos.x += speedMove * Time.deltaTime;
+			pos += transform.right * Time.deltaTime * speedMove;
 		}
 
 		if (Input.GetKey ("up")) {
@@ -35,11 +33,11 @@ public class CamaraMovementPlayer : MonoBehaviour {
 		}
 
 		if (Input.GetKey ("w")) {
-			pos.z += speedMove * Time.deltaTime;
+			pos += transform.forward * Time.deltaTime * speedMove;
 		}
 
 		if (Input.GetKey ("s")) {
-			pos.z += -speedMove * Time.deltaTime;
+			pos += -transform.forward * Time.deltaTime * speedMove;
 		}
 
 		if (Input.GetKey ("a")) {
