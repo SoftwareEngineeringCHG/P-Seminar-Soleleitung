@@ -1,4 +1,7 @@
-[Ll]ibrary/
+[Ll]ibrary/cache/
+[Ll]ibrary/metadata/
+[Ll]ibrary/ScriptAssemblies/
+[Ll]ibrary/ShaderCache/
 [Tt]emp/
 [Oo]bj/
 [Bb]uild/
